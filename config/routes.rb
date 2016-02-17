@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
   resources :admins
   resources :posts
+
+  get "/pages/:page" => "pages#show"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'admin#index'
+  root "pages#show", page: "home"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
