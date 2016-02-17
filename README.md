@@ -1,0 +1,2 @@
+# Function_Coffee_Labs
+Function Coffee Labs is a new startup coffee shop in Philadelphia (Bella Vista neighborhood) with an emphasis on speciality coffee and coffee education. They need a site that shows off their aesthetic and basic information regarding their business. FCL also needs a blog so they can connect with their customers and spread their coffee knowledge with anyone visiting their site!  
