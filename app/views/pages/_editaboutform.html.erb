@@ -1,0 +1,15 @@
+<%= form_tag, :url => {:controller => "pages", :action => "edit_about"} do %>
+<%= label_tag 'Header' %>
+<%= text_field_tag "header" %>
+<br>
+<br>
+<%= label_tag 'Paragraph One' %>
+<%= text_field_tag "p_one" %>
+<br>
+<br>
+<%= label_tag 'Paragraph Two' %>
+<%= text_field_tag "p_two" %>
+<br>
+<br>
+<%= f.submit %>
+<% end %>
