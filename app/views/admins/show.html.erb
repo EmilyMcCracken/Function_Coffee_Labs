@@ -1,0 +1,37 @@
+<h1> Welcome to the Admin Portal </h1>
+<h3> Function Cofee Labs (replace with logo) </h3>
+<hr>
+
+Username: <%= @admin.username %>
+<%= tag :br %>
+Pin: <%= @admin.pin %>
+<%= tag :br %>
+<%= link_to("Sign Out", '/logout', method: :delete) %>
+<hr>
+
+<h3> Blog Management </h3>
+
+<%= button_to "Create New Blog Post", new_post_path, :method => "get" %>
+<%= tag :br %>
+<button type="button">List of Posts</button>
+<%= tag :br %>
+<%= tag :br %>
+<button type="button">Change Blog Header (add ajax)</button>
+<hr>
+
+<h3> Website Management </h3>
+<p> Homepage </p>
+<button type="button">Edit Header Image (add ajax)</button>
+<button type="button">Edit Content (add ajax)</button>
+<p> Edit Menu Page </p>
+<button type="button">Edit Header Image (add ajax)</button>
+<button type="button">Edit Content (add ajax)</button>
+<p> Edit Our Story Page </p>
+<button type="button">Edit Header Image (add ajax)</button>
+<button type="button">Edit Content (add ajax)</button>
+<p> Edit Our Travels Page </p>
+<button type="button">Edit Header Image (add ajax)</button>
+<button type="button">Edit Content (add ajax)</button>
+<hr>
+
+

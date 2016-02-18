@@ -1,0 +1,15 @@
+<h1> Create a New Admin </h1>
+
+<p> 
+	Please be aware that all Admins have the abilities to make changes to the website, create blog posts, delete blog posts, etc. 
+</p>
+
+<%= form_for @admin do |f| %>
+<%= f.label :username %>
+<%= f.text_field :username %>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<%= f.label :pin %>
+<%= f.text_field :pin %>
+<%= f.submit %>
+<% end %>

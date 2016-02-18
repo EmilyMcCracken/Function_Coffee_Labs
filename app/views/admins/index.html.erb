@@ -1,0 +1,11 @@
+
+
+<h3> list of admins </h3>
+ <% @admins.each do |admin| %>
+	<%= admin.username %>
+ <% end %>
+
+ <h4> current admin (remove) </h4> 
+<% if current_admin != nil %>
+<%= @current_admin.username %>
+<% end %>

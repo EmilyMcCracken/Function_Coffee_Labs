@@ -1,0 +1,12 @@
+<h1> Function Coffee Labs Blog! </h1>
+<hr>
+
+ <% @posts.each do |post| %>
+	<%= post.title %>
+	<br>
+	<%= post.body %>
+	<br>
+	Category: <%= post.category %>
+	<br>
+	<hr>
+ <% end %>
