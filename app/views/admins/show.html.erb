@@ -13,10 +13,9 @@ Pin: <%= @admin.pin %>
 
 <%= button_to "Create New Blog Post", new_post_path, :method => "get" %>
 <%= tag :br %>
-<button type="button">List of Posts</button>
+<%= button_to "Edit Blog Posts", '/pages/list', :method => "get" %>
 <%= tag :br %>
-<%= tag :br %>
-<button type="button">Change Blog Header (add ajax)</button>
+<%= button_to "Edit Blog Posts", '/pages/list', :method => "get" %>
 <hr>
 
 <h3> Website Management </h3>

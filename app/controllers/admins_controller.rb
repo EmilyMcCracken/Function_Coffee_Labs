@@ -6,11 +6,6 @@ class AdminsController < ApplicationController
 
 	def show
 		@admin = Admin.find(params[:id])
-		@post = Post.new
-		respond_to do |format|
-			format.html
-			format.js
-		end
 	end
 
 	# only accessible to meg & ross (will give them route)
