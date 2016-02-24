@@ -1,0 +1,28 @@
+<%= form_for [:webpage, @body] do |f| %>
+  <% if @body.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@body.errors.count, "error") %> prohibited this body from being saved:</h2>
+
+      <ul>
+      <% @body.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :subheader %><br>
+    <%= f.text_field :subheader %>
+  </div>
+  <div class="field">
+    <%= f.label :paragraph %><br>
+    <%= f.text_area :paragraph %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:webpage_id, :value => @webpage.id)%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

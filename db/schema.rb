@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217161414) do
+ActiveRecord::Schema.define(version: 20160224200752) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -21,6 +21,34 @@ ActiveRecord::Schema.define(version: 20160217161414) do
     t.datetime "updated_at",      null: false
   end
 
+  create_table "bodies", force: :cascade do |t|
+    t.string   "subheader"
+    t.text     "paragraph"
+    t.integer  "webpage_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "headers", force: :cascade do |t|
+    t.string   "text"
+    t.integer  "webpage_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "image_pages", force: :cascade do |t|
+    t.integer  "webpage_id"
+    t.integer  "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
@@ -28,6 +56,13 @@ ActiveRecord::Schema.define(version: 20160217161414) do
     t.integer  "admin_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "webpages", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "type"
   end
 
 end

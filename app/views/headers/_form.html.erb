@@ -1,0 +1,24 @@
+<%= form_for [:webpage, @header] do |f| %>
+  <% if @header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@header.errors.count, "error") %> prohibited this header from being saved:</h2>
+
+      <ul>
+      <% @header.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :text %><br>
+    <%= f.text_field :text %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field(:webpage_id, :value => @webpage.id)%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

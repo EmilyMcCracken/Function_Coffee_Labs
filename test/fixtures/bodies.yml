@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subheader: MyString
+  paragraph: MyText
+  webpage_id: 1
+
+two:
+  subheader: MyString
+  paragraph: MyText
+  webpage_id: 1

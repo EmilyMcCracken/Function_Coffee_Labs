@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  # resources :image_pages
+  resources :images
+  resources :webpages do 
+    resources :headers
+    resources :bodies
+  end
   resources :admins
   resources :posts
 

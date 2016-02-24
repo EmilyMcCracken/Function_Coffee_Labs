@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Image Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Webpage</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @image_pages.each do |image_page| %>
+      <tr>
+        <td><%= image_page.webpage_id %></td>
+        <td><%= image_page.image_id %></td>
+        <td><%= link_to 'Show', image_page %></td>
+        <td><%= link_to 'Edit', edit_image_page_path(image_page) %></td>
+        <td><%= link_to 'Destroy', image_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image page', new_image_page_path %>
