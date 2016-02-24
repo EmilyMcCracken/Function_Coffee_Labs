@@ -3,7 +3,7 @@ class Webpage < ActiveRecord::Base
 	has_many :headers
 	has_many :bodies 
 
-	PAGES = ['Homepage', 'Contentpage', 'Imagepage']
+	PAGES = ['Homepage', 'Contentpage', 'Picturepage']
 
 	def get_page
 		PAGES[@type]
