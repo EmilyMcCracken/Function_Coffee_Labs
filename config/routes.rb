@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy', as: :logout
 
+  resources :contentpage, :controller => "webpages", :type => "Contentpage"
+  resources :picturepage, :controller => "webpages", :type => "Picturepage"
+  resources :homepage, :controller => "webpages", :type => "Homepage"
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

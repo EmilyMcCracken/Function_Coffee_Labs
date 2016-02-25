@@ -1,0 +1,4 @@
+<% @webpages.each do |web| %>
+<%= web.name %> | <br>
+<%= link_to 'Edit', edit_webpage_path(webpage) %>
+ <% end %>

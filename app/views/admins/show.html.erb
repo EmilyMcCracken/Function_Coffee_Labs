@@ -9,31 +9,19 @@ Pin: <%= @admin.pin %>
 <%= link_to("Sign Out", '/logout', method: :delete) %>
 <hr>
 
+<h3> Website Management </h3>
+<p> Add a New Webpage </p>
+<%= button_to "Add Webpage!", new_webpage_path, :method => "get" %>
+<br>
+<p> Edit Current Webpages </p>
+<%= button_to "Edit Your Webpages!", webpages_path, :method => "get" %>
+<hr>
+
+
 <h3> Blog Management </h3>
 
 <%= button_to "Create New Blog Post", new_post_path, :method => "get" %>
 <%= tag :br %>
 <%= button_to "Edit Blog Posts", '/pages/list', :method => "get" %>
 <%= tag :br %>
-NOT WORKING <%= button_to "Edit Blog Posts", '/pages/list', :method => "get" %>
-<hr>
-
-<h3> NOT WORKING Website Management </h3>
-<p> Edit Homepage </p>
-<button type="button">Edit Header Image (add ajax)</button>
-<button type="button">Edit Content (add ajax)</button>
-<p> Edit Our Story Page </p>
-<button type="button">Edit Header Image (add ajax)</button>
-<button type="button">Edit Content (add ajax)</button>
-<p> Edit Menu Page </p>
-<button type="button">Edit Header Image (add ajax)</button>
-<button type="button">Edit Content (add ajax)</button>
-<p> Edit Our Story Page </p>
-<button type="button">Edit Header Image (add ajax)</button>
-<button type="button">Edit Content (add ajax)</button>
-<p> Edit Our Travels Page </p>
-<button type="button">Edit Header Image (add ajax)</button>
-<button type="button">Edit Content (add ajax)</button>
-<hr>
-
 

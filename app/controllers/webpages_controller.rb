@@ -17,6 +17,7 @@ class WebpagesController < ApplicationController
 
  
   def edit
+    @webpage = Webpage.find(params[:id])
   end
 
   def create
@@ -30,11 +31,9 @@ class WebpagesController < ApplicationController
 
 
   def update
-      if @webpage.update(webpage_params)
-        redirect_to @webpage
-      else
-        redirect_to @webpage
-      end
+    @webpage = Webpage.find(params[:id])
+    @webpage.update(webpage_params)
+        redirect_to webpage_path @webpage
   end
 
 
