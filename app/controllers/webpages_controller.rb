@@ -8,7 +8,6 @@ class WebpagesController < ApplicationController
 
   def show
     @webpage = Webpage.find(params[:id])
-    @header = Header.find(params[:webpage_id][:header])
   end
 
 

@@ -34,7 +34,6 @@ class HeadersController < ApplicationController
   def destroy
     @header.destroy
     redirect_to headers_url
-    end
   end
 
   private

@@ -1,16 +1,4 @@
 <%= form_for(@image_page) do |f| %>
-  <% if @image_page.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@image_page.errors.count, "error") %> prohibited this image_page from being saved:</h2>
-
-      <ul>
-      <% @image_page.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
     <%= f.label :webpage_id %><br>
     <%= f.number_field :webpage_id %>
