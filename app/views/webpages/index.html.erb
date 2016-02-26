@@ -1,4 +1,7 @@
+
+<h1> Your current Webpages </h1>
 <% @webpages.each do |web| %>
-<%= web.name %> | <br>
-<%= link_to 'Edit', edit_webpage_path(webpage) %>
+<%= web.name %> |
+<%= link_to 'Edit', edit_webpage_path(web) %> |
+<%= link_to 'View', webpage_path(web) %> <br><br>
  <% end %>

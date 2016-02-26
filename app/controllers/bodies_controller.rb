@@ -14,6 +14,8 @@ class BodiesController < ApplicationController
   end
 
   def edit
+    @body = Body.find(params[:id])
+    @webpage = Webpage.find(params[:webpage_id])
   end
 
   def create
@@ -26,10 +28,10 @@ class BodiesController < ApplicationController
   end
 
   def update
-      if @body.update(body_params)
-        redirect_to @body
-      else
-    end
+    @body = Body.find(params[:id])
+    @webpage = Webpage.find(params[:webpage_id])
+    @body.update(body_params)
+    redirect_to admin_path(@current_admin.id)
   end
 
   def destroy

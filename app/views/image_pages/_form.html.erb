@@ -1,11 +1,9 @@
 <%= form_for(@image_page) do |f| %>
   <div class="field">
-    <%= f.label :webpage_id %><br>
-    <%= f.number_field :webpage_id %>
+    <%= f.hidden_field :webpage_id %>
   </div>
   <div class="field">
-    <%= f.label :image_id %><br>
-    <%= f.number_field :image_id %>
+    <%= f.hidden_field :image_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -10,11 +10,13 @@ Pin: <%= @admin.pin %>
 <hr>
 
 <h3> Website Management </h3>
-<p> Add a New Webpage </p>
-<%= button_to "Add Webpage!", new_webpage_path, :method => "get" %>
+Add a New Webpage <%= button_to "+", new_webpage_path, :method => "get" %> 
 <br>
-<p> Edit Current Webpages </p>
-<%= button_to "Edit Your Webpages!", webpages_path, :method => "get" %>
+Edit Current Webpages <%= button_to "+", webpages_path, :method => "get" %>
+<br>
+Add a New Image to Your Database <%= button_to "+", new_image_path, :method => "get" %>
+<br>
+See Your Image Database <%= button_to "+", images_path, :method => "get" %>
 <hr>
 
 

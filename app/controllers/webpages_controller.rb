@@ -32,8 +32,9 @@ class WebpagesController < ApplicationController
 
   def update
     @webpage = Webpage.find(params[:id])
+    @header = @webpage.headers.first
     @webpage.update(webpage_params)
-        redirect_to webpage_path @webpage
+        redirect_to edit_webpage_header_path(@webpage.id, @header.id)
   end
 
 
@@ -44,7 +45,27 @@ class WebpagesController < ApplicationController
   end
 
   private
+
+    # def webpage_params
+    #   params.require(:webpage).permit(:name, :type)
+    # end
+
     def webpage_params
       params.require(:webpage).permit(:name, :type)
     end
-end
+
+    # def webpage_params(type)
+    #   case type
+    #   when "webpage"
+    #   params.require(:webpage).permit(:name, :type)
+    #   when "Contentpage"
+    #   params.require(:contentpage).permit(:name, :type)
+    #   when "Picturepage"
+    #   params.require(:picturepage).permit(:name, :type)
+    #   when "Homepage"
+    #   params.require(:homepage).permit(:name, :type)
+    #   end
+    # end
+
+  end
+

@@ -20,17 +20,12 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(image_params)
-      if @image.save
-        redirect_to @image
-      else
-      end
+    @image.save
+    redirect_to @image
   end
 
   def update
-      if @image.update(image_params)
-        format.html { redirect_to @image
-      else
-      end
+    @image.update(image_params)
   end
 
   def destroy
@@ -40,6 +35,6 @@ class ImagesController < ApplicationController
 
   private
     def image_params
-      params.require(:image).permit(:name)
+      params.require(:image).permit(:name, :img)
     end
 end

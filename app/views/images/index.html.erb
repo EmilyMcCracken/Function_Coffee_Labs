@@ -1,0 +1,5 @@
+<h1> Your Uploaded Images </h1>
+<% @images.each do |image| %>
+<%= image.name %><br>
+<%= image_tag image.img.url(:medium) %> <br><br>
+<% end %>

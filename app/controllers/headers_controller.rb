@@ -5,6 +5,7 @@ class HeadersController < ApplicationController
   end
 
   def show
+    @header = Header.find(params[:id])
   end
 
   def new
@@ -13,6 +14,8 @@ class HeadersController < ApplicationController
   end
 
   def edit
+    @header = Header.find(params[:id])
+    @webpage = Webpage.find(params[:webpage_id])
   end
 
   def create
@@ -25,10 +28,11 @@ class HeadersController < ApplicationController
   end
 
   def update
-      if @header.update(header_params)
-        redirect_to @header
-      else
-      end
+    @header = Header.find(params[:id])
+    @webpage = Webpage.find(params[:webpage_id])
+    @body = @webpage.bodies.first
+    @header.update(header_params)
+    redirect_to edit_webpage_body_path(@webpage.id, @body.id)
   end
 
   def destroy

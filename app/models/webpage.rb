@@ -14,13 +14,20 @@ class Webpage < ActiveRecord::Base
 end
 
 class Homepage < Webpage
+	def self.model_name
+		Webpage.model_name
+	end
 
 end
 
 class Picturepage < Webpage
-
+	def self.model_name
+		Webpage.model_name
+	end
 end
 
 class Contentpage < Webpage
-	
+	def self.model_name
+		Webpage.model_name
+	end
 end
