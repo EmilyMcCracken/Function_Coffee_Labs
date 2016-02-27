@@ -22,7 +22,7 @@ class BodiesController < ApplicationController
     @body = Body.new(body_params)
     @webpage = Webpage.find(params[:webpage_id])
       if @body.save
-        redirect_to root_path
+        redirect_to new_webpage_image_page_path(@webpage.id)
       else
       end
   end

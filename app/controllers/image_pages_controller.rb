@@ -10,6 +10,7 @@ class ImagePagesController < ApplicationController
 
   def new
     @image_page = ImagePage.new
+    @webpage = Webpage.find(params[:webpage_id])
   end
 
   def edit
@@ -17,18 +18,19 @@ class ImagePagesController < ApplicationController
 
   def create
     @image_page = ImagePage.new(image_page_params)
+    @webpage = Webpage.find(params[:webpage_id])
     @image_page.save
-    redirect_to @image_page
+    redirect_to webpage_path(@webpage.id)
   end
 
   def update
     @image_page.update(image_page_params)
-    redirect_to @image_page
+    redirect_to root_path
   end
 
   def destroy
     @image_page.destroy
-    redirect_to image_pages_url
+    redirect_to root_path
   end
 
   private

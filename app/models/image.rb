@@ -1,5 +1,6 @@
 class Image < ActiveRecord::Base
 	has_many :webpages, through: :image_pages
+	has_many :image_pages
 
 	has_attached_file :img, :styles =>
 	{ :medium => "300x300>", :thumb => "100x100>" },

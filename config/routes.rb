@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :webpages do 
     resources :headers
     resources :bodies
+    resources :image_pages
   end
   resources :admins
   resources :posts

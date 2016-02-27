@@ -1,9 +1,9 @@
-<%= form_for(@image_page) do |f| %>
+<%= form_for [:webpage, @image_page] do |f| %>
   <div class="field">
-    <%= f.hidden_field :webpage_id %>
+    <%= f.hidden_field(:webpage_id, :value => @webpage.id) %>
   </div>
   <div class="field">
-    <%= f.hidden_field :image_id %>
+    <%= f.collection_select :image_id, Image.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
