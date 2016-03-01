@@ -23,14 +23,12 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(image_params)
-    render layout: "admin_layout"
     @image.save
-    redirect_to @image
+    redirect_to images_path
   end
 
   def update
     @image.update(image_params)
-    render layout: "admin_layout"
   end
 
   def destroy

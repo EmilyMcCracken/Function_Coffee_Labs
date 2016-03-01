@@ -2,7 +2,6 @@ class PostsController < ApplicationController
 	# BLOG -- visible to public
 	def index
 		@posts = Post.all
-		render layout: "admin_layout"
 	end
 
 	def show
@@ -19,10 +18,9 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 		@admin = current_admin
 		@post.admin_id = @admin.id
-		render layout: "admin_layout"
     	@post.save 
 
-  		redirect_to posts_path
+  		redirect_to post_path(@post.id)
 	end
 
 	# only accesible to an admin
@@ -34,7 +32,6 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.find(params[:id])
     	@admin = current_admin
-    	render layout: "admin_layout"
         @post.update(post_params)
         redirect_to '/pages/list'
         flash[:notice] = "Profile Updated!"

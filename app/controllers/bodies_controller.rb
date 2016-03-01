@@ -33,7 +33,8 @@ class BodiesController < ApplicationController
     @body = Body.find(params[:id])
     @webpage = Webpage.find(params[:webpage_id])
     @body.update(body_params)
-    redirect_to admin_path(@current_admin.id)
+    @image_page = @webpage.image_pages.first
+    redirect_to edit_webpage_image_page_path(@webpage.id, @image_page.id)
   end
 
   def destroy

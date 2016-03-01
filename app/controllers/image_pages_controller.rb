@@ -15,6 +15,8 @@ class ImagePagesController < ApplicationController
   end
 
   def edit
+    @image_page = ImagePage.find(params[:id])
+    @webpage = Webpage.find(params[:webpage_id])
     render layout: "admin_layout"
   end
 
@@ -23,11 +25,14 @@ class ImagePagesController < ApplicationController
     @webpage = Webpage.find(params[:webpage_id])
     @image_page.save
     redirect_to webpage_path(@webpage.id)
+    
   end
 
   def update
+    @image_page = ImagePage.new(image_page_params)
+    @webpage = Webpage.find(params[:webpage_id])
     @image_page.update(image_page_params)
-    redirect_to root_path
+    redirect_to webpage_path(@webpage.id)
   end
 
   def destroy

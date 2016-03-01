@@ -1,12 +1,12 @@
 <%= form_for [@webpage, @header] do |f| %>
   <div class="field">
     <%= f.label :text %><br>
-    <%= f.text_field :text %>
+    <%= f.text_field :text %> <br> <br>
   </div>
   <div class="field">
     <%= f.hidden_field(:webpage_id, :value => @webpage.id)%>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add Header" %>
   </div>
 <% end %>

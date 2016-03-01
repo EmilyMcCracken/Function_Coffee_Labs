@@ -32,7 +32,6 @@ class HeadersController < ApplicationController
   def update
     @header = Header.find(params[:id])
     @webpage = Webpage.find(params[:webpage_id])
-    render layout: "admin_layout"
     @body = @webpage.bodies.first
     @header.update(header_params)
     redirect_to edit_webpage_body_path(@webpage.id, @body.id)

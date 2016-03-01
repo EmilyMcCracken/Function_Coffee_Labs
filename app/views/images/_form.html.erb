@@ -1,14 +1,14 @@
 <%= form_for @image do |f| %>   
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name %> <br> <br>
   </div>
   <div class="field">
   	<%= f.label :Image %><br>
-	<%= f.file_field :img %> 
+	<%= f.file_field :img %> <br> <br>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Upload New Image"%>
   </div>
 <% end %>
 

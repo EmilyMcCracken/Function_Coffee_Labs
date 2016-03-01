@@ -13,6 +13,61 @@
  *= require_tree .
  *= require_self
  */
+.home_header {
+	height: 600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
+	background-image: url('coffee_cheesecake.jpg');
+}
+
+.home_logo {
+	width: 400px;
+	margin-top: 230px;
+	margin-left: 420px;
+
+}
+
+.home_nav {
+	position: fixed;
+	width: 100%;
+	display: block;
+	top: 0px;
+	font-family: helvetica;
+} 
+
+body {
+	position: relative;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background:transparent ;
+}
+
+.home_li {
+    float: left;
+    padding: 5px;
+}
+
+.home_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.home_li a:hover {
+    background-color: white;
+    color: #1f8dd6;
+}
 
 #webpage_body {
 	background-image: url('');
@@ -53,28 +108,33 @@
 }
 
 .nav_logo {
-    width: 300px;
+    width: 250px;
+    box-shadow: 3px 3px 3px black;
 }
 
-.nav_logo:hover {
-	box-shadow: 3px 3px 3px black;
+.dash_icon {
+	width: 60px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 10px;
 }
 
-ul {
+
+.admin_ul {
 	top: 0;
 	left: 0;
 	position: fixed;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 300px;
+    width: 350px;
     height: 100%;
-    border-right: 8px solid #295956;
+    border-right: 12px solid #3E3E4B;
     background-color: #E9E8E7;
     font-family: helvetica;
 }
 
-li a {
+.admin_li a {
     display: block;
     text-decoration: none;
     color: #3E3E4B;
@@ -83,30 +143,33 @@ li a {
     margin-bottom: 5px;
 }
 
-li a:hover {
+.admin_li a:hover {
 	background-color: #3E3E4B;
 	color: #E9E8E7;
 	box-shadow: 5px 5px 5px #3E3E4B;
 }
 
-ul h3 {
+.admin_ul h3 {
 	color: #567E80;
-	margin-left: 20px;
+	margin-left: 15px;
 }
 
-ul h2 {
+.admin_ul h2 {
 	color: #3E3E4B;
 	margin-left: 20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-left: 15px;
 }
 
 #content {
 	position: relative;
-	margin-left: 30%;
+	margin-left: 33%;
     width: 800px;
 }
 
 #admin_landing {
-	background: #3E3E4B;
+	background: #7989A1;
 }
 
 .content_box {

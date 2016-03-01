@@ -1,7 +1,11 @@
-
-<h1> Your current Webpages </h1>
+<body id="admin_landing">
+<div class="content_box">
+<h1> Your Current Webpages </h1>
 <% @webpages.each do |web| %>
-<%= web.name %> |
+<%= web.name %> | 
+<%= web.type %> |
 <%= link_to 'Edit', edit_webpage_path(web) %> |
 <%= link_to 'View', webpage_path(web) %> <br><br>
  <% end %>
+</div>
+</div>

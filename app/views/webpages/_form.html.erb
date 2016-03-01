@@ -1,13 +1,13 @@
 <%= form_for(@webpage) do |f| %>
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name %> <br> <br>
   </div>
   <div class="field">
     <%= f.label :type %><br>
     <%= f.select :type, Webpage::PAGES.map {|x| [x]}%>
-  </div>
+  </div> <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Webpage" %>
   </div>
 <% end %>
