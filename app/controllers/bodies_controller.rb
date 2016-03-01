@@ -11,11 +11,13 @@ class BodiesController < ApplicationController
   def new
     @body = Body.new
     @webpage = Webpage.find(params[:webpage_id])
+    render layout: "admin_layout"
   end
 
   def edit
     @body = Body.find(params[:id])
     @webpage = Webpage.find(params[:webpage_id])
+    render layout: "admin_layout"
   end
 
   def create

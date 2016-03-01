@@ -3,6 +3,7 @@ class ImagesController < ApplicationController
 
   def index
     @images = Image.all
+    render layout: "admin_layout"
   end
 
   def show
@@ -12,20 +13,24 @@ class ImagesController < ApplicationController
 
   def new
     @image = Image.new
+    render layout: "admin_layout"
   end
 
 
   def edit
+    render layout: "admin_layout"
   end
 
   def create
     @image = Image.new(image_params)
+    render layout: "admin_layout"
     @image.save
     redirect_to @image
   end
 
   def update
     @image.update(image_params)
+    render layout: "admin_layout"
   end
 
   def destroy

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FunctionCoffeeLabs</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="current_admin_box">
+		Username: <%= @current_admin.username %>
+		<%= tag :br %>
+		Pin: <%= @current_admin.pin %>
+		<%= tag :br %>
+	</div>
+		<nav>
+	      <ul>
+	        <%= link_to image_tag("Function.png", class: "nav_logo"), admin_path(@current_admin)%>
+	        <h2> Admin Dashboard </h2>
+	        <h3> Webpage Management </h3>
+	          <li><%= link_to "Add a New Webpage", new_webpage_path %></li>
+	          <li><%= link_to "Edit Current Webpages", webpages_path %></li>
+	          <li><%= link_to "Add a New Image to Database", new_image_path %></li>
+	          <li><%= link_to "Image Database", images_path %></li>
+	          <hr>
+	        <h3> Blog Management </h3>
+	          <li><%= link_to "Create a New Blog Post", new_post_path %></li>
+	          <li><%= link_to "Edit Blog Posts", '/pages/list' %></li>
+	          <hr>
+	        <h3> Admin Settings </h3>
+	      </ul>
+	    </nav>
+
+	<div id="content">
+	<%= yield %>
+	</div>
+
+	</body>
+	</html>

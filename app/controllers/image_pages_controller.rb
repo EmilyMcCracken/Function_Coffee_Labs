@@ -11,9 +11,11 @@ class ImagePagesController < ApplicationController
   def new
     @image_page = ImagePage.new
     @webpage = Webpage.find(params[:webpage_id])
+    render layout: "admin_layout"
   end
 
   def edit
+    render layout: "admin_layout"
   end
 
   def create

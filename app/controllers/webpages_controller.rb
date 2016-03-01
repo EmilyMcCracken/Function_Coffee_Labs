@@ -3,6 +3,7 @@ class WebpagesController < ApplicationController
 
   def index
     @webpages = Webpage.all
+    render layout: "admin_layout"
   end
 
 
@@ -13,11 +14,13 @@ class WebpagesController < ApplicationController
 
   def new
     @webpage = Webpage.new
+    render layout: "admin_layout"
   end
 
  
   def edit
     @webpage = Webpage.find(params[:id])
+    render layout: "admin_layout"
   end
 
   def create
@@ -33,6 +36,7 @@ class WebpagesController < ApplicationController
   def update
     @webpage = Webpage.find(params[:id])
     @header = @webpage.headers.first
+    render layout: "admin_layout"
     @webpage.update(webpage_params)
         redirect_to edit_webpage_header_path(@webpage.id, @header.id)
   end

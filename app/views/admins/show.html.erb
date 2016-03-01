@@ -1,29 +1,15 @@
-<h1> Welcome to the Admin Portal </h1>
-<h3> Function Cofee Labs (replace with logo) </h3>
+<body id="admin_landing">
+<div class="content_box">
+<h1> Welcome to Your Admin Portal </h1>
 <hr>
+<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
+<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
+<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
+<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
+<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
+<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
+<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
 
-Username: <%= @admin.username %>
-<%= tag :br %>
-Pin: <%= @admin.pin %>
-<%= tag :br %>
 <%= link_to("Sign Out", '/logout', method: :delete) %>
-<hr>
-
-<h3> Website Management </h3>
-Add a New Webpage <%= button_to "+", new_webpage_path, :method => "get" %> 
-<br>
-Edit Current Webpages <%= button_to "+", webpages_path, :method => "get" %>
-<br>
-Add a New Image to Your Database <%= button_to "+", new_image_path, :method => "get" %>
-<br>
-See Your Image Database <%= button_to "+", images_path, :method => "get" %>
-<hr>
-
-
-<h3> Blog Management </h3>
-
-<%= button_to "Create New Blog Post", new_post_path, :method => "get" %>
-<%= tag :br %>
-<%= button_to "Edit Blog Posts", '/pages/list', :method => "get" %>
-<%= tag :br %>
-
+</div>
+</div>

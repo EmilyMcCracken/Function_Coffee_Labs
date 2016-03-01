@@ -1,9 +1,11 @@
 class SessionsController < ApplicationController
 	def new
+		render layout: "admin_layout"
 	end
 
 	def create
-		@admin = Admin.where(username: params[:username]).first     
+		@admin = Admin.where(username: params[:username]).first 
+		render layout: "admin_layout"    
 		 if @admin && @admin.authenticate(params[:password_digest])
 			 session[:admin_id] = @admin.id
 			 redirect_to @admin

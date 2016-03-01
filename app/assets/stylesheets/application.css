@@ -14,6 +14,9 @@
  *= require_self
  */
 
+#webpage_body {
+	background-image: url('');
+}
  .webpage_header {
  	font-size: 25px;
  	font-family: helvetica;
@@ -21,10 +24,6 @@
  	background-color: white;
  	text-align: center;
  }
-
-body {
-	background-color: grey;
-}
 
 .webpage_content {
 	border: 5px solid teal;
@@ -51,4 +50,78 @@ body {
 .image {
 	margin-right: 400px;
 	margin-left: 450px;
+}
+
+.nav_logo {
+    width: 300px;
+}
+
+.nav_logo:hover {
+	box-shadow: 3px 3px 3px black;
+}
+
+ul {
+	top: 0;
+	left: 0;
+	position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 100%;
+    border-right: 8px solid #295956;
+    background-color: #E9E8E7;
+    font-family: helvetica;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: #3E3E4B;
+    font-size: 19px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+li a:hover {
+	background-color: #3E3E4B;
+	color: #E9E8E7;
+	box-shadow: 5px 5px 5px #3E3E4B;
+}
+
+ul h3 {
+	color: #567E80;
+	margin-left: 20px;
+}
+
+ul h2 {
+	color: #3E3E4B;
+	margin-left: 20px;
+}
+
+#content {
+	position: relative;
+	margin-left: 30%;
+    width: 800px;
+}
+
+#admin_landing {
+	background: #3E3E4B;
+}
+
+.content_box {
+	font-family: helvetica;
+	background-color: rgba(255, 255, 255, .4);
+	clear: both;
+	text-align: center;
+}
+
+.current_admin_box {
+	top: 0;
+	float: right;
+	color: #3E3E4B;
+	width: 150px;
+	background-color: rgba(255, 255, 255, .6);
+	font-family: helvetica;
+	margin-bottom: 30px;
 }
