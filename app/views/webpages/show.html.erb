@@ -1,27 +1,15 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title><%= @webpage.name %></title>
-	</head>
-		<body>
-			<div class="webpage_header">
-				<%= @webpage.headers.first.text %>
-			</div>
-			
-			<div class="webpage_content">
-				<div class="webpage_subheader"><%= @webpage.bodies.first.subheader %></div>
-				<div class="webpage_paragraph"><%= @webpage.bodies.first.paragraph %></div>
-			</div>
 
-			<div class="webpage_images">
-				<% @webpage.images.each do |image| %>
-					<div class="image"><%= image_tag image.img.url(:medium) %></div> <br><br>
-				<% end %>
-			</div>
+    <% if @webpage.type == 'Contentpage' %>
+      <%= render 'contentpage' %>
+    <% end %>
 
-		</body>
-
-</html>
+    <% if @webpage.type == 'Picturepage' %>
+      <%= render 'picturepage' %>
+    <% end %>
+    
+    <% if @webpage.type == 'Homepage' %>
+      <%= render 'homepage' %>
+  	<% end %>
 
 
 
