@@ -2,7 +2,7 @@ class HeaderImagesController < ApplicationController
   def show
   	@header_image = HeaderImage.find(params[:id])
   end
-  
+
   def new
   	@header_image = HeaderImage.new
     @webpage = Webpage.find(params[:webpage_id])
@@ -31,7 +31,7 @@ class HeaderImagesController < ApplicationController
 
    private
     def header_image_params
-      params.require(:header_image).permit(:webpage_id, :image_id)
+      params.require(:header_image).permit(:webpage_id, :image_id, :head_img)
     end
 
 end
