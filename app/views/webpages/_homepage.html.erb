@@ -4,12 +4,12 @@
 		<title><%= @webpage.name %></title>
 	</head>
 		<body>
-			<header class="home_header" style="background-image:url(<%= @webpage.header_image.img.url %>)">
+			<header class="home_header" style="background-image:url(<%= @webpage.header_image.head_img.url %>)">
 				<nav class="home_nav">
 					<ul class="navbar">
-						<li class="home_li"><a href="">About</a></li>
-						<li class="home_li"><a href="">Menu</a></li>
-						<li class="home_li"><a href="">Contact</a></li>
+						<% @webpages.each do |web| %>
+						<li class="home_li"><%= link_to "#{web.name}", "/webpages/#{web.id}" %></li>
+						<% end %>
 					</ul>
 				</nav>
 				<%= image_tag("Function.png", class: "home_logo") %>

@@ -9,6 +9,7 @@ class WebpagesController < ApplicationController
 
   def show
     @webpage = Webpage.find(params[:id])
+    @webpages = Webpage.all
   end
 
 

@@ -70,7 +70,7 @@ body {
 }
 
 .other_header {
-	height: 400px;
+	height: 450px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top: -8px;
@@ -81,7 +81,7 @@ body {
 
 .other_logo {
 	width: 300px;
-	margin-top: 10%;
+	margin-top: 15%;
 	margin-left: 37%;
 
 }
