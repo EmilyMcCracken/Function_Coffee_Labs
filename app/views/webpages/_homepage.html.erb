@@ -4,7 +4,7 @@
 		<title><%= @webpage.name %></title>
 	</head>
 		<body>
-			<header class="home_header">
+			<header class="home_header" style="background-image:url(<%= @webpage.header_image.img.url %>)">
 				<nav class="home_nav">
 					<ul class="navbar">
 						<li class="home_li"><a href="">About</a></li>

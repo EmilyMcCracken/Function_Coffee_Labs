@@ -1,0 +1,12 @@
+<%= form_for [@webpage, @header_image], :html => { :multipart => true } do |f| %>
+  <div class="field">
+    <%= f.hidden_field(:webpage_id, :value => @webpage.id) %>
+  </div>
+  <div class="field">
+  	<%= f.label "Upload Image" %> <br>
+    <%= f.file_field :head_img %> <br><br>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add Image to Header" %>
+  </div>
+<% end %>

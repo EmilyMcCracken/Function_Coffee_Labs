@@ -24,7 +24,7 @@ class BodiesController < ApplicationController
     @body = Body.new(body_params)
     @webpage = Webpage.find(params[:webpage_id])
       if @body.save
-        redirect_to new_webpage_image_page_path(@webpage.id)
+        redirect_to new_webpage_header_image_path(@webpage.id)
       else
       end
   end
@@ -34,7 +34,7 @@ class BodiesController < ApplicationController
     @webpage = Webpage.find(params[:webpage_id])
     @body.update(body_params)
     @image_page = @webpage.image_pages.first
-    redirect_to edit_webpage_image_page_path(@webpage.id, @image_page.id)
+    redirect_to edit_webpage_header_image_path(@webpage.id, @header_image.id)
   end
 
   def destroy

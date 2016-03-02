@@ -10,7 +10,8 @@
 <p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
 <p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
 <p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
-
-<%= link_to("Sign Out", '/logout', method: :delete) %>
+<hr>
+<%= link_to("Sign Out", '/logout', method: :delete) %> <br>
+<%= link_to 'Delete Your Account?', @admin, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 </div>

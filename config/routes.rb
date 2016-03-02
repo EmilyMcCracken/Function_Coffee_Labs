@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+
   # resources :image_pages
   resources :images
   resources :webpages do 
     resources :headers
     resources :bodies
     resources :image_pages
+    resources :header_images
   end
   resources :admins
   resources :posts

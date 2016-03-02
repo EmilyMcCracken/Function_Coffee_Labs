@@ -4,6 +4,17 @@
 		<title><%= @webpage.name %></title>
 	</head>
 		<body>
+			<header class="other_header">
+				<nav class="other_nav">
+					<ul class="navbar">
+						<li class="other_li"><a href="">Home</a></li>
+						<li class="other_li"><a href="">About</a></li>
+						<li class="other_li"><a href="">Menu</a></li>
+						<li class="other_li"><a href="">Contact</a></li>
+					</ul>
+				</nav>
+				<%= image_tag("Function.png", class: "other_logo") %>
+			</header>
 			<div class="webpage_header">
 				<%= @webpage.headers.first.text %>
 			</div>

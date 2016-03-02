@@ -3,6 +3,7 @@ class Webpage < ActiveRecord::Base
 	has_many :image_pages, foreign_key: 'webpage_id'
 	has_many :headers, foreign_key: 'webpage_id'
 	has_many :bodies, foreign_key: 'webpage_id' 
+	has_one :header_image, foreign_key: 'webpage_id'
 
 	PAGES = ['Homepage', 'Contentpage', 'Picturepage']
 

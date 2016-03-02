@@ -43,8 +43,9 @@ class WebpagesController < ApplicationController
 
 
   def destroy
+    @webpage = Webpage.find(params[:id])
     @webpage.destroy
-    redirect_to root_path
+    redirect_to admin_path(@current_admin)
   end
 
   private

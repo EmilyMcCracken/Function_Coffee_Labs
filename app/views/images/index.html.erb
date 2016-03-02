@@ -3,7 +3,10 @@
 <h1> Your Uploaded Images </h1>
 <% @images.each do |image| %>
 <%= image.name %><br>
-<%= image_tag image.img.url(:medium) %> <br><br>
+<%= image_tag image.img.url(:medium) %> <br>
+<%= link_to 'Remove Image From Database?', image_path(image), method: :delete %>
+
+<hr>
 <% end %>
 </div>
 </div>

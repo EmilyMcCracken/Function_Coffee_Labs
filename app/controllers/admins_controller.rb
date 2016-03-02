@@ -19,7 +19,6 @@ class AdminsController < ApplicationController
 
 	def create
 		@admin = Admin.new(admin_params)
-		render layout: "admin_layout"
 		if @admin.save
 	        session[:admin_id] = @admin.id
 	        flash[:notice] = "Created New Admin for Function Coffee Labs"
@@ -32,11 +31,12 @@ class AdminsController < ApplicationController
 
 	# only accessible to an admin who is logged in
 	def edit 
+		@admin = Admin.find(params[:id])
 		render layout: "admin_layout"
 	end
 
 	def update
-		render layout: "admin_layout"
+		
 	end
 
 	# only accessible to an admin who is logged in 

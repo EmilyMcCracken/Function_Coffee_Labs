@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226152828) do
+ActiveRecord::Schema.define(version: 20160302160531) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 20160226152828) do
     t.integer  "webpage_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "header_images", force: :cascade do |t|
+    t.integer  "webpage_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "head_img_file_name"
+    t.string   "head_img_content_type"
+    t.integer  "head_img_file_size"
+    t.datetime "head_img_updated_at"
   end
 
   create_table "headers", force: :cascade do |t|

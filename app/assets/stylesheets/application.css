@@ -69,6 +69,50 @@ body {
     color: #1f8dd6;
 }
 
+.other_header {
+	height: 400px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
+	background-image: url('coffee_cheesecake.jpg');
+}
+
+.other_logo {
+	width: 300px;
+	margin-top: 10%;
+	margin-left: 37%;
+
+}
+
+.other_nav {
+	position: fixed;
+	width: 100%;
+	display: block;
+	top: 0px;
+	font-family: helvetica;
+} 
+
+.other_li {
+    float: left;
+    padding: 5px;
+}
+
+.other_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.other_li a:hover {
+    background-color: white;
+    color: #1f8dd6;
+}
+
 #webpage_body {
 	background-image: url('');
 }
@@ -141,6 +185,7 @@ body {
     font-size: 19px;
     margin-left: 15px;
     margin-bottom: 5px;
+    padding: 7px;
 }
 
 .admin_li a:hover {

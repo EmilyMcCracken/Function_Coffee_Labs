@@ -24,8 +24,7 @@ class ImagePagesController < ApplicationController
     @image_page = ImagePage.new(image_page_params)
     @webpage = Webpage.find(params[:webpage_id])
     @image_page.save
-    redirect_to webpage_path(@webpage.id)
-    
+    redirect_to webpage_path(@webpage.id) 
   end
 
   def update
