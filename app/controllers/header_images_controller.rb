@@ -25,7 +25,8 @@ class HeaderImagesController < ApplicationController
   def update
     @header_image = HeaderImage.find(params[:id])
     @webpage = Webpage.find(params[:webpage_id])
-    @image_page.update(header_image_params)
+    @header_image.update(header_image_params)
+    @image_page = @webpage.image_pages.first
     redirect_to edit_webpage_image_page_path(@webpage.id, @image_page.id)
   end
 

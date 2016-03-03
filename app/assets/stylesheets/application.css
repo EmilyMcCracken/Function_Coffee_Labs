@@ -13,6 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+ .blog_box {
+ 	margin-top: 30px;
+ 	background-color: #3E4147;
+ 	color: white;
+ 	font-family: helvetica;
+ 	width: 800px;
+ 	text-align: center;
+ 	margin-left: 18%;
+ }
+
+ .blog_body {
+ 	background-color: #3E4147;
+ }
+
+ .post_title {
+ 	font-size: 30px;
+ 	background-color: black;
+ 	box-shadow: 5px 5px 5px black;
+ 	color: white;
+ 	margin-bottom: 10px;
+
+ }
+
+ .title_link a {
+ 	text-decoration: none;
+ 	color: white;
+ }
+
+ .title_link a:hover {
+ 	background-color: white;
+ 	color:black;
+ }
+
+ .previous_title {
+	font-size: 20px;
+ 	background-color: black;
+ 	box-shadow: 5px 5px 5px black;
+ 	color: white;
+ }
+
 .home_header {
 	height: 600px;
 	background-size: cover;
@@ -22,6 +63,45 @@
 	margin-right: -8px;
 	background-image: url('coffee_cheesecake.jpg');
 }
+
+.blog_header {
+	height: 550px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: -8px;
+	background-image: url('FCLblog3.png');
+	border-bottom: 20px black solid;
+}
+
+.blog_li {
+    float: left;
+    padding: 5px;
+}
+
+.blog_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    font-size: 25px;
+    background-color: black;
+    box-shadow: 5px 5px 5px black;
+}
+
+.blog_li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.blog_nav {
+	width: 100%;
+	display: block;
+	top: 0px;
+	font-family: helvetica;
+} 
 
 .home_logo {
 	width: 400px;
@@ -43,6 +123,14 @@ body {
 }
 
 .navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background:transparent ;
+}
+
+.blog_navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -149,6 +237,10 @@ body {
 .image {
 	margin-right: 400px;
 	margin-left: 450px;
+}
+
+.edit_image {
+	text-align: center;
 }
 
 .nav_logo {

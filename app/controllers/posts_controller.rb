@@ -2,10 +2,12 @@ class PostsController < ApplicationController
 	# BLOG -- visible to public
 	def index
 		@posts = Post.all
+		@webpages = Webpage.all
 	end
 
 	def show
 		@post = Post.find(params[:id])
+		@webpages = Webpage.all
 	end
 
 	# only accesible to an admin
@@ -39,6 +41,9 @@ class PostsController < ApplicationController
 
 	# only accessible to an admin
 	def destroy
+		@post = Post.find(params[:id])
+   	 	@post.destroy
+    	redirect_to '/pages/list'
 	end
 
 	private 

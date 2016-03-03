@@ -35,8 +35,11 @@ class ImagePagesController < ApplicationController
   end
 
   def destroy
+    @image_page = ImagePage.find(params[:id])
+    @webpage = Webpage.find(params[:webpage_id])
     @image_page.destroy
-    redirect_to root_path
+    @header_image = @webpage.header_image
+    redirect_to edit_webpage_header_image_path(@webpage.id, @header_image.id)
   end
 
   private

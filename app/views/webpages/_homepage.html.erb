@@ -10,6 +10,7 @@
 						<% @webpages.each do |web| %>
 						<li class="home_li"><%= link_to "#{web.name}", "/webpages/#{web.id}" %></li>
 						<% end %>
+						<li class="other_li"><%= link_to "FCL Blog", posts_path %></li>
 					</ul>
 				</nav>
 				<%= image_tag("Function.png", class: "home_logo") %>

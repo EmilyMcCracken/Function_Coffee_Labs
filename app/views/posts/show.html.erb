@@ -1,5 +1,29 @@
-<h1> Post </h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= "FCL Blog" %></title>
+	</head>
+		<body class="blog_body">
+			<header class="blog_header">
+				<nav class="blog_nav">
+					<ul class="blog_navbar">
+						<% @webpages.each do |web| %>
+						<li class="blog_li"><%= link_to "#{web.name}", "/webpages/#{web.id}" %></li>
+						<% end %>
+						<li class="blog_li"><%= link_to "FCL Blog", posts_path %></li>
+					</ul>
+				</nav>
+			</header>
+				<div class="blog_box">
+				<div class="recent_post">
+					<div class="post_title"><%= @post.title %></div>
+					Category: <%= @post.category %> <br> <br>
+					<%= simple_format @post.body %>
+					
+					<div class="title_link"><%= link_to "back", posts_path %></div>
+				</div>
+			</div>
 
-<%= @post.title %>
-<%= @post.body %>
-<%= @post.category %>
+		</body>
+
+</html>

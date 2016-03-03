@@ -1,8 +1,13 @@
 <body id="admin_landing">
 <div class="content_box">
-<h1>Editing Image Page</h1>
+<h1>Add/Remove Webpage Images</h1>
 
 <%= render 'form' %>
+
+<h3> current images on webpage </h3>
+	<% @webpage.images.each do |image| %>
+	<div class="edit_image"><%= image_tag image.img.url(:medium) %></div>
+	<% end %>
 </div>
 </div>
 

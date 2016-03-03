@@ -33,7 +33,7 @@ class BodiesController < ApplicationController
     @body = Body.find(params[:id])
     @webpage = Webpage.find(params[:webpage_id])
     @body.update(body_params)
-    @image_page = @webpage.image_pages.first
+    @header_image = @webpage.header_image
     redirect_to edit_webpage_header_image_path(@webpage.id, @header_image.id)
   end
 
