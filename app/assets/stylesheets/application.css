@@ -166,6 +166,7 @@ body {
 	margin-left: -8px;
 	margin-right: -8px;
 	background-image: url('coffee_cheesecake.jpg');
+	border-bottom: solid #043D5D 15px;
 }
 
 .other_logo {
@@ -252,6 +253,18 @@ body {
 	margin-left: 300px;
 }
 
+span img{
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	float: left;
+	margin: 15px;
+}
+.picture_images {
+	margin-right: 100px;
+	margin-left: 200px;
+}
+
 .homepage_body {
 	font-family: helvetica;
 	background-image: url('coffee_wood_sneak.png');
@@ -261,6 +274,7 @@ body {
 
 .contentpage_body {
 	font-family: helvetica;
+	background-color: #F5E6C9;
 }
 
 .webpage_header {
@@ -277,6 +291,24 @@ body {
 	background-color: rgba(255, 255, 255, .6);
 	padding: 30px;
 	margin-left: 20%;
+}
+
+.contentpage_content {
+	width: 700px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .6);
+	padding: 30px;
+	margin-left: 20%;
+	border-radius: 40px;
+}
+
+.picturepage_content {
+	width: 700px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .6);
+	padding: 30px;
+	margin-left: 20%;
+	border-radius: 40px;
 }
 
 .webpage_subheader {

@@ -19,14 +19,14 @@
 					<%= @webpage.headers.first.text %>
 				</div>
 				
-				<div class="webpage_content">
+				<div class="contentpage_content">
 					<div class="webpage_subheader"><%= @webpage.bodies.first.subheader %></div>
 					<div class="webpage_paragraph"><%= simple_format @webpage.bodies.first.paragraph %></div>
 				</div>
 
 				<div class="webpage_images">
 					<% @webpage.images.each do |image| %>
-						<%= image_tag image.img.url(:medium), :class => "image" %> <br><br>
+						<%= image_tag image.img.url(:medium), :class => "image" %>
 					<% end %>
 				</div>
 		</body>

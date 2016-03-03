@@ -3,7 +3,7 @@
 	<head>
 		<title><%= @webpage.name %></title>
 	</head>
-		<body>
+		<body class="picturepage_body">
 			<header class="other_header" style="background-image:url(<%= @webpage.header_image.head_img.url %>)">
 				<nav class="other_nav">
 					<ul class="navbar">
@@ -19,16 +19,15 @@
 				<%= @webpage.headers.first.text %>
 			</div>
 
-			THIS IS A PICTUREPAGE
 			
 			<div class="webpage_content">
 				<div class="webpage_subheader"><%= @webpage.bodies.first.subheader %></div>
 				<div class="webpage_paragraph"><%= @webpage.bodies.first.paragraph %></div>
 			</div>
 
-			<div class="webpage_images">
+			<div class="picture_images">
 				<% @webpage.images.each do |image| %>
-					<div class="image"><%= image_tag image.img.url(:medium) %></div> <br><br>
+					<span><%= image_tag image.img.url(:medium) %></span>
 				<% end %>
 			</div>
 		</body>
