@@ -3,7 +3,7 @@
 	<head>
 		<title><%= @webpage.name %></title>
 	</head>
-		<body>
+		<body class="homepage_body">
 			<header class="home_header" style="background-image:url(<%= @webpage.header_image.head_img.url %>)">
 				<nav class="home_nav">
 					<ul class="navbar">
@@ -19,12 +19,10 @@
 			<div class="webpage_header">
 				<%= @webpage.headers.first.text %>
 			</div>
-
-			THIS IS A HOMEPAGE
 			
 			<div class="webpage_content">
 				<div class="webpage_subheader"><%= @webpage.bodies.first.subheader %></div>
-				<div class="webpage_paragraph"><%= @webpage.bodies.first.paragraph %></div>
+				<div class="webpage_paragraph"><%= simple_format @webpage.bodies.first.paragraph %></div>
 			</div>
 
 			<div class="webpage_images">

@@ -18,7 +18,7 @@
 $(document).ready(function(){
 
     $(window).scroll(function() { 
-      	if ($(document).scrollTop() > 300) {
+      	if ($(document).scrollTop() > 400) {
           $(".navbar").css("background-color", "#043D5D"); 
         } else {
           $(".navbar-fixed-top").css("background-color", "transparent");

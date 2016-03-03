@@ -3,7 +3,7 @@
     <%= f.hidden_field(:webpage_id, :value => @webpage.id) %>
   </div>
   <div class="field">
-    <%= f.collection_select :image_id, Image.all, :id, :name %> <br> <br>
+    <%= f.collection_select :image_id, Image.all, :id, :name, :prompt => "no pictures for now!" %> <br> <br>
   </div>
   <div class="actions">
     <%= f.submit "Add Image" %>

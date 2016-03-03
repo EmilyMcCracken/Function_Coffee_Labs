@@ -43,7 +43,7 @@
  }
 
  .title_link a:hover {
- 	background-color: white;
+ 	background-color: #DFBA69;
  	color:black;
  }
 
@@ -62,6 +62,7 @@
 	margin-left: -8px;
 	margin-right: -8px;
 	background-image: url('coffee_cheesecake.jpg');
+	border-bottom: solid #043D5D 15px;
 }
 
 .blog_header {
@@ -204,7 +205,7 @@ body {
 #webpage_body {
 	background-image: url('');
 }
- .webpage_header {
+ /*.webpage_header {
  	font-size: 25px;
  	font-family: helvetica;
  	color: black;
@@ -237,6 +238,55 @@ body {
 .image {
 	margin-right: 400px;
 	margin-left: 450px;
+}*/
+
+.image {
+	width: 300px;
+	margin: 10px;
+	height: 299px;
+	text-align: center;
+	float: left;
+}
+.webpage_images {
+	margin-right: 300px;
+	margin-left: 300px;
+}
+
+.homepage_body {
+	font-family: helvetica;
+	background-image: url('coffee_wood_sneak.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.contentpage_body {
+	font-family: helvetica;
+}
+
+.webpage_header {
+	font-size: 70px;
+	margin: 30px;
+	text-align: center;
+	font-family: 'Walter Turncoat', cursive;
+	color: #47040B;
+}
+
+.webpage_content {
+	width: 700px;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .6);
+	padding: 30px;
+	margin-left: 20%;
+}
+
+.webpage_subheader {
+	font-size: 30px;
+	font-family: 'Walter Turncoat', cursive;
+}
+
+.webpage_paragraph {
+	color: #043D5D;
+	font-size: 20px;
 }
 
 .edit_image {
