@@ -3,13 +3,21 @@
 <h1> Welcome to Your Admin Portal </h1>
 <hr>
 <%= image_tag("Function.png", class: "nav_logo")%>
-<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
-<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
-<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
-<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
-<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
-<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
-<p> lorem random lorem lorem random lorem lorem random lorem lorem random lorem lorem random lorem </p>
+<h2>Getting Started:</h2>
+<h3> Use the controls on your Admin Dashboard to... </h3>
+<h4> --Create a New Webpage </h4>
+<p> Create a name for your navigation bar, add header text, create body content and pick images for your main header and the rest of the page </p>
+<h4> --Edit Your Webpages </h4>
+<p> View your exisiting webpages and either edit the information or remove them from the webpage </p>
+<h4> --Image Database </h4>
+<p> Your website has an image databse. Use the controls on the side to add images to your database or view your current database (this is also where you can remove photos from your database). All the images in your database can be accessed when creating new webpages. </p>
+<h4> --Create a New Blog Post </h4>
+<p> Create new posts for your blogs. Give them an interesting title, write your text and pick a category for easy organization! </p>
+<h4> --Edit Your Blog </h4>
+<p> View all your current blog posts. You can edit them, view them or delete them. </p>
+<h4> --Admin Settings </h4>
+<p> You can easily change any of your account settings here </p>
+
 <hr>
 <%= link_to("Sign Out", '/logout', method: :delete) %> <br>
 <%= link_to 'Delete Your Account?', @admin, method: :delete, data: { confirm: 'Are you sure?' } %>
