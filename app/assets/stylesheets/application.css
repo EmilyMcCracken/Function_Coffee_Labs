@@ -396,6 +396,7 @@ span img{
 	background-color: rgba(255, 255, 255, .4);
 	clear: both;
 	text-align: center;
+	box-shadow: 10px 10px 10px black;
 }
 
 .current_admin_box {

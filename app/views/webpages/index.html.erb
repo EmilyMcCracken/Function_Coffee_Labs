@@ -6,6 +6,7 @@
 <%= web.type %> |
 <%= link_to 'Edit', edit_webpage_path(web) %> |
 <%= link_to 'View', webpage_path(web) %> |
+<%= link_to 'Publish', publish_webpage_path(web) %> 
 <%= link_to 'Delete', webpage_path(web), method: :delete, data: {confirm: 'Are you sure?'} %> 
 <br><br>
  <% end %>

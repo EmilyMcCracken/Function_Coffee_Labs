@@ -49,6 +49,15 @@ class WebpagesController < ApplicationController
     redirect_to admin_path(@current_admin)
   end
 
+  def publish
+    @webpage = Webpage.find(params[:id])
+      if @webpage.update(:publish, true)
+        redirect_to webpages_path
+      else
+       redirect_to webpages_path
+      end 
+  end
+
   private
 
     # def webpage_params
@@ -56,21 +65,8 @@ class WebpagesController < ApplicationController
     # end
 
     def webpage_params
-      params.require(:webpage).permit(:name, :type)
+      params.require(:webpage).permit(:name, :type, :publish)
     end
 
-    # def webpage_params(type)
-    #   case type
-    #   when "webpage"
-    #   params.require(:webpage).permit(:name, :type)
-    #   when "Contentpage"
-    #   params.require(:contentpage).permit(:name, :type)
-    #   when "Picturepage"
-    #   params.require(:picturepage).permit(:name, :type)
-    #   when "Homepage"
-    #   params.require(:homepage).permit(:name, :type)
-    #   end
-    # end
-
-  end
+end
 

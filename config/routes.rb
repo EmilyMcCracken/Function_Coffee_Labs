@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new', as: :login
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy', as: :logout
+  # post 'publish' => 'webpages#publish', as: :publish
+  get "webpages/:id/publish" => "webpages#publish", :as => "publish_page"
 
   resources :contentpage, :controller => "webpages", :type => "Contentpage"
   resources :picturepage, :controller => "webpages", :type => "Picturepage"
