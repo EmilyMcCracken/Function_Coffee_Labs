@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   # resources :image_pages
   resources :images
   resources :webpages do 
+    get 'publish'
+    get 'unpublish'
+    post 'publish'
+    post 'unpublish'
     resources :headers
     resources :bodies
     resources :image_pages
@@ -16,7 +20,6 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy', as: :logout
   # post 'publish' => 'webpages#publish', as: :publish
-  get "webpages/:id/publish" => "webpages#publish", :as => "publish_page"
 
   resources :contentpage, :controller => "webpages", :type => "Contentpage"
   resources :picturepage, :controller => "webpages", :type => "Picturepage"

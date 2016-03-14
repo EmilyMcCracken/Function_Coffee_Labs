@@ -2,11 +2,15 @@
 <div class="content_box">
 <h1> Your Current Webpages </h1>
 <% @webpages.each do |web| %>
+<% if web.publish? %>
+  <%= button_to "Unpublish", webpage_unpublish_path(:webpage_id => web.id) %>
+<% else %>
+  <%= button_to "Publish", webpage_publish_path(:webpage_id => web.id) %>
+<% end %>
 <%= web.name %> | 
 <%= web.type %> |
 <%= link_to 'Edit', edit_webpage_path(web) %> |
 <%= link_to 'View', webpage_path(web) %> |
-<%= link_to 'Publish', publish_webpage_path(web) %> 
 <%= link_to 'Delete', webpage_path(web), method: :delete, data: {confirm: 'Are you sure?'} %> 
 <br><br>
  <% end %>

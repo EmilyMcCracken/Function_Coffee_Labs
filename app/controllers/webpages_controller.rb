@@ -41,8 +41,6 @@ class WebpagesController < ApplicationController
         redirect_to edit_webpage_header_path(@webpage.id, @header.id)
   end
 
-
-
   def destroy
     @webpage = Webpage.find(params[:id])
     @webpage.destroy
@@ -50,13 +48,17 @@ class WebpagesController < ApplicationController
   end
 
   def publish
-    @webpage = Webpage.find(params[:id])
-      if @webpage.update(:publish, true)
-        redirect_to webpages_path
-      else
-       redirect_to webpages_path
-      end 
+    @webpage = Webpage.find(params[:webpage_id])
+    @webpage.update(publish: true)
+    redirect_to webpages_path
   end
+ 
+  def unpublish
+    @webpage = Webpage.find(params[:webpage_id])
+    @webpage.update(publish: false)
+    redirect_to webpages_path
+  end
+
 
   private
 
