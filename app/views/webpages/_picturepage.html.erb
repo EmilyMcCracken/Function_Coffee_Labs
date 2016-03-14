@@ -8,7 +8,9 @@
 				<nav class="other_nav">
 					<ul class="navbar">
 						<% @webpages.each do |web| %>
+						<% if web.publish? %>
 						<li class="other_li"><%= link_to "#{web.name}", "/webpages/#{web.id}" %></li>
+						<% end %>
 						<% end %>
 						<li class="other_li"><%= link_to "FCL Blog", posts_path %></li>
 					</ul>

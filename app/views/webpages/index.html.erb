@@ -1,18 +1,26 @@
 <body id="admin_landing">
 <div class="content_box">
-<h1> Your Current Webpages </h1>
+<h2> Current Webpages </h2>
 <% @webpages.each do |web| %>
 <% if web.publish? %>
-  <%= button_to "Unpublish", webpage_unpublish_path(:webpage_id => web.id) %>
-<% else %>
-  <%= button_to "Publish", webpage_publish_path(:webpage_id => web.id) %>
-<% end %>
-<%= web.name %> | 
-<%= web.type %> |
+<div class="pub_item">
+<strong><%= web.name %></strong> <br>
+Page Type: <%= web.type %> <br>
 <%= link_to 'Edit', edit_webpage_path(web) %> |
 <%= link_to 'View', webpage_path(web) %> |
 <%= link_to 'Delete', webpage_path(web), method: :delete, data: {confirm: 'Are you sure?'} %> 
-<br><br>
- <% end %>
+<%= button_to "Unpublish", webpage_unpublish_path(:webpage_id => web.id), class: "pub_button" %> 
 </div>
+<% else %>
+<h2> Unpublished Webpages </h2>
+<div class="pub_item">
+<strong><%= web.name %></strong> <br>
+Page Type: <%= web.type %> <br>
+<%= link_to 'Edit', edit_webpage_path(web) %> |
+<%= link_to 'View', webpage_path(web) %> |
+<%= link_to 'Delete', webpage_path(web), method: :delete, data: {confirm: 'Are you sure?'} %> 
+<%= button_to "Publish", webpage_publish_path(:webpage_id => web.id), class: "pub_button" %> 
+</div>
+<% end %>
+<% end %>
 </div>

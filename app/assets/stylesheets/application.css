@@ -408,3 +408,19 @@ span img{
 	font-family: helvetica;
 	margin-bottom: 30px;
 }
+
+.pub_button {
+	font-size: 15px;
+	background-color: #043D5D;
+	color: white;
+	margin-top: 5px;
+}
+
+.pub_item {
+	display: inline-block;
+	padding: 10px;
+	margin: 10px;
+	border: 5px black solid;
+	box-shadow: 5px 5px 5px #3E3E4B;
+}
+
