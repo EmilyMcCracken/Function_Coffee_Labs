@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<title><%= @webpage.name %></title>
+		<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
 	</head>
 		<body class="contentpage_body">
 			<header class="other_header" style="background-image:url(<%= @webpage.header_image.head_img.url %>)">
@@ -17,20 +20,41 @@
 				</nav>
 				<%= image_tag("Function.png", class: "other_logo") %>
 			</header>
-				<div class="webpage_header">
-					<%= @webpage.headers.first.text %>
-				</div>
-				
-				<div class="contentpage_content">
-					<div class="webpage_subheader"><%= @webpage.bodies.first.subheader %></div>
-					<div class="webpage_paragraph"><%= simple_format @webpage.bodies.first.paragraph %></div>
-				</div>
+
+			<div class="slogan">
+				<h1> function </h1>
+				<h2> noun | func·tion </h2> 
+				<h3> work or operate in a proper or particular way </h3>
+				<h3> “I can't function until I've had coffee.” </h3>
+			</div>
+
+			<section class="module parallax parallax-1">
+			          <div class="container">
+			            <h1 class="name"><%= @webpage.headers.first.text %></h1>
+					  </div>
+			    </section>
+
+			    <section class="module content">
+			          <div class="container">
+			          	<p>
+			          		<%= @webpage.bodies.first.subheader %>
+							<%= simple_format @webpage.bodies.first.paragraph %>
+			          	</p>
+
+			          </div>
+			    </section>
 
 				<div class="webpage_images">
 					<% @webpage.images.each do |image| %>
 						<%= image_tag image.img.url(:medium), :class => "image" %>
 					<% end %>
 				</div>
+
+				<section class="module parallax-foot">
+			         <div class="container">
+			            <h1 class="footer">1001 S. 10th Street | Philadelphia </h1>
+					 </div>
+			    </section>
 		</body>
 
 </html>

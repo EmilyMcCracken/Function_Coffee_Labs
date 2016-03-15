@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title><%= @webpage.name %></title>
+		<link href='https://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
 	</head>
 		<body class="picturepage_body">
 			<header class="other_header" style="background-image:url(<%= @webpage.header_image.head_img.url %>)">
@@ -17,21 +18,40 @@
 				</nav>
 				<%= image_tag("Function.png", class: "other_logo") %>
 			</header>
-			<div class="webpage_header">
-				<%= @webpage.headers.first.text %>
-			</div>
+				<div class="slogan">
+					<h1> function </h1>
+					<h2> noun | func·tion </h2> 
+					<h3> work or operate in a proper or particular way </h3>
+					<h3 class="example"> “I can't function until I've had coffee.” </h3>
+				</div>
 
-			
-			<div class="webpage_content">
-				<div class="webpage_subheader"><%= @webpage.bodies.first.subheader %></div>
-				<div class="webpage_paragraph"><%= @webpage.bodies.first.paragraph %></div>
-			</div>
+			<section class="module parallax parallax-2">
+			          <div class="container">
+			            <h1 class="name"><%= @webpage.headers.first.text %></h1>
+					  </div>
+			    </section>
+
+			    <section class="module content">
+			          <div class="container">
+			          	<p>
+			          		<%= @webpage.bodies.first.subheader %>
+							<%= simple_format @webpage.bodies.first.paragraph %>
+			          	</p>
+
+			          </div>
+			    </section>
 
 			<div class="picture_images">
 				<% @webpage.images.each do |image| %>
 					<span><%= image_tag image.img.url(:medium) %></span>
 				<% end %>
 			</div>
+
+			<section class="module parallax-foot">
+			         <div class="container">
+			            <h1 class="footer">1001 S. 10th Street | Philadelphia </h1>
+					 </div>
+			</section>
 		</body>
 
 </html>

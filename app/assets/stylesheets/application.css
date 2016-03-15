@@ -251,6 +251,7 @@ body {
 .webpage_images {
 	margin-right: 300px;
 	margin-left: 300px;
+	height: 400px;
 }
 
 span img{
@@ -263,18 +264,15 @@ span img{
 .picture_images {
 	margin-right: 100px;
 	margin-left: 200px;
+	height: 600px;
 }
 
 .homepage_body {
 	font-family: helvetica;
-	background-image: url('coffee_wood_sneak.png');
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
 .contentpage_body {
 	font-family: helvetica;
-	background-color: #F5E6C9;
 }
 
 .webpage_header {
@@ -383,8 +381,8 @@ span img{
 
 #content {
 	position: relative;
-	margin-left: 33%;
-    width: 800px;
+	margin-left: 35%;
+    width: 750px;
 }
 
 #admin_landing {
@@ -397,6 +395,7 @@ span img{
 	clear: both;
 	text-align: center;
 	box-shadow: 10px 10px 10px black;
+	padding: 5px;
 }
 
 .current_admin_box {
@@ -416,11 +415,132 @@ span img{
 	margin-top: 5px;
 }
 
+.pub_button:hover {
+	color: white;
+	background-color: #3E3E4B;
+	font-size: 15px;
+}
+
 .pub_item {
 	display: inline-block;
 	padding: 10px;
-	margin: 10px;
-	border: 5px black solid;
+	margin: 20px;
+	border: 3px #3E3E4B solid;
 	box-shadow: 5px 5px 5px #3E3E4B;
+	background-color: white;
+}
+
+.pub_item:hover {
+	box-shadow: 12px 12px 12px #3E3E4B;
+}
+
+/*.current_pages:hover {
+	background-color: #3E3E4B;
+	color: white;
+}*/
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+  color: #663366;
+}
+
+section.module h3 {
+/*  margin-bottom: 40px;*/
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  color: #663366;
+}
+
+section.module p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Roboto Slab", serif;
+}
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  text-align: center;
+  padding: 30px 0;
+}
+section.module.parallax {
+  border-top: solid 5px black;
+  height: 400px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+section.module.parallax-foot {
+  border-top: solid 5px black;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: -8px;
+}
+
+.name {
+/*  margin-top: 75px;*/
+  font-family: "Roboto Slab", serif;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 275px;
+  font-size: 100px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  font-family: "Roboto Slab", serif;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 100px;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax-1 {
+  background-image: url("wood_background.jpg");
+}
+
+section.module.parallax-2 {
+  background-image: url("shop.jpg");
+}
+
+section.module.parallax-3 {
+  background-image: url("read.jpg");
+}
+
+section.module.parallax-foot {
+  background-image: url("road.jpg");
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.slogan {
+	font-family: "Roboto Slab", serif;
+	text-align: center;
+	padding-top: 10px;
 }
 
